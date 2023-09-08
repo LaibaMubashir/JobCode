@@ -4,7 +4,7 @@ from classes import user, student, employee
 from flask_session import Session
 import random
 import smtplib
-obj = model("localhost", "root", "LM@282003!", "jobcode")
+obj = model("localhost", "root", "------", "jobcode")
 app = Flask(__name__, static_folder="static")
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["SESSION_PERMANENT"] = False
@@ -12,7 +12,7 @@ Session(app)
 app.secret_key = "bsjvhusdhg5565645"
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_USERNAME = 'deebaumar02@gmail.com'
+EMAIL_USERNAME = '------@gmail.com'
 EMAIL_PASSWORD = 'mdeszqmjqumqgmjx'
 #dsa answers
 correct_answers_dsa1 = {
