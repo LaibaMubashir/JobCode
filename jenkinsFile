@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    environment{
+        PATH='\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\maven\bin:$PATH'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/javahometech/myweb.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
