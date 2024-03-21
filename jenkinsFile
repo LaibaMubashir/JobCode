@@ -10,10 +10,6 @@ pipeline {
                 git 'https://github.com/LaibaMubashir/JobCode.git'
             }
         }
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
+        
     }
 }
