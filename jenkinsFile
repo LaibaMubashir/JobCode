@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/javahometech/myweb.git'
+                git 'https://github.com/LaibaMubashir/JobCode.git'
             }
         }
         stage('Build') {
