@@ -1,15 +1,16 @@
 pipeline {
     agent any
-    environment{
-        PATH='\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\maven\bin:$PATH'
-    }
     
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/LaibaMubashir/JobCode.git'
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/LaibaMubashir/JobCode.git']])
             }
         }
-        
+        stage('Build') {
+            steps {
+                echo "Build project"
+            }
+        }
     }
 }
